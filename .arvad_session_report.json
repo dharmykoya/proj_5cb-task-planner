@@ -1,0 +1,15 @@
+{
+  "files_created": [".gitignore"],
+  "files_modified": ["README.md"],
+  "decisions": [
+    {
+      "what": "Wrote .gitignore with all specified exclusions",
+      "why": "Spec required node_modules/, .DS_Store, Thumbs.db, .env, .env.local, *.log, .vscode/, .idea/, dist/, build/, coverage/ — kept minimal for a static site with no build process"
+    },
+    {
+      "what": "Replaced README.md content with comprehensive documentation",
+      "why": "Spec required sections: Project Overview, Features, Architecture, localStorage Schema, Setup Instructions, GitHub Pages deployment, Browser Compatibility, Privacy & Security, File Structure, Development Guidelines, and Known Limitations"
+    }
+  ],
+  "tools_used": ["Read", "Write"]
+}
