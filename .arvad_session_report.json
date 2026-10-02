@@ -1,15 +1,19 @@
 {
-  "files_created": [".gitignore"],
-  "files_modified": ["README.md"],
+  "files_created": ["index.html"],
+  "files_modified": [],
   "decisions": [
     {
-      "what": "Wrote .gitignore with all specified exclusions",
-      "why": "Spec required node_modules/, .DS_Store, Thumbs.db, .env, .env.local, *.log, .vscode/, .idea/, dist/, build/, coverage/ — kept minimal for a static site with no build process"
+      "what": "Used label wrapping file input to implement Import Tasks button",
+      "why": "File import requires a file input element; wrapping it in a styled label provides button-like UX while maintaining accessibility and correct semantics."
     },
     {
-      "what": "Replaced README.md content with comprehensive documentation",
-      "why": "Spec required sections: Project Overview, Features, Architecture, localStorage Schema, Setup Instructions, GitHub Pages deployment, Browser Compatibility, Privacy & Security, File Structure, Development Guidelines, and Known Limitations"
+      "what": "Added visually-hidden h2 to actions section",
+      "why": "HTML code generation rules require every section to have a heading. The actions section had no visible heading in the spec, so a visually-hidden heading was added for accessibility compliance."
+    },
+    {
+      "what": "Applied Tier 2 complexity patterns",
+      "why": "The task is a landing-page-level interactive SPA shell, matching Tier 2 (Standard). Included ARIA labels, meta description, skip link, and semantic HTML5 structure."
     }
   ],
-  "tools_used": ["Read", "Write"]
+  "tools_used": ["Read", "Write", "Bash"]
 }

@@ -20,3 +20,6 @@ Thumbs.db
 dist/
 build/
 coverage/
+
+# Claude CLI task files
+arvad_task_files/

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Planner - Privacy-First Task Management</title>
+  <meta name="description" content="A privacy-first task planner that keeps your tasks local. Organize, track, and manage tasks without accounts or cloud sync.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Task Planner</h1>
+    <p class="tagline">Privacy-first task management — your data stays on your device.</p>
+  </header>
+
+  <main id="main">
+    <section id="task-input" aria-labelledby="task-input-heading">
+      <h2 id="task-input-heading">Add a Task</h2>
+      <form id="task-form" novalidate>
+        <div class="field">
+          <label for="task-title">Task title <span aria-label="required">*</span></label>
+          <input
+            type="text"
+            id="task-title"
+            name="task-title"
+            maxlength="500"
+            placeholder="Add a new task..."
+            aria-label="Task title"
+            required
+            autocomplete="off"
+          >
+        </div>
+        <div class="field">
+          <label for="task-description">Description</label>
+          <textarea
+            id="task-description"
+            name="task-description"
+            maxlength="2000"
+            placeholder="Description (optional)"
+            aria-label="Task description"
+            rows="3"
+          ></textarea>
+        </div>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section id="task-list" aria-labelledby="task-list-heading">
+      <h2 id="task-list-heading">Your Tasks</h2>
+      <ul id="tasks" role="list" aria-label="Task list"></ul>
+      <p id="empty-state">No tasks yet. Add one above to get started.</p>
+    </section>
+
+    <section id="actions" aria-labelledby="actions-heading">
+      <h2 id="actions-heading" class="visually-hidden">Task Actions</h2>
+      <button type="button" id="clear-completed">Clear Completed</button>
+      <button type="button" id="export-tasks">Export Tasks</button>
+      <label for="import-tasks" class="btn-import">
+        Import Tasks
+        <input type="file" id="import-tasks" accept=".json" aria-label="Import tasks from file">
+      </label>
+    </section>
+  </main>
+
+  <footer>
+    <p class="privacy-note">Your tasks are stored locally on your device. No data is sent to any server.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
